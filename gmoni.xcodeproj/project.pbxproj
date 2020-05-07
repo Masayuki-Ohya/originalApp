@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		157BECB42462738900FDEAFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECB32462738900FDEAFD /* AppDelegate.swift */; };
 		157BECB62462738900FDEAFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECB52462738900FDEAFD /* SceneDelegate.swift */; };
-		157BECB82462738900FDEAFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECB72462738900FDEAFD /* ViewController.swift */; };
 		157BECBB2462738900FDEAFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157BECB92462738900FDEAFD /* Main.storyboard */; };
 		157BECBD2462738B00FDEAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157BECBC2462738B00FDEAFD /* Assets.xcassets */; };
 		157BECC02462738B00FDEAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157BECBE2462738B00FDEAFD /* LaunchScreen.storyboard */; };
+		157BECC8246284DB00FDEAFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECC7246284DA00FDEAFD /* LoginViewController.swift */; };
+		157BECCA246284EE00FDEAFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECC9246284EE00FDEAFD /* HomeViewController.swift */; };
+		157BECCE24628C8A00FDEAFD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECCD24628C8A00FDEAFD /* TabBarController.swift */; };
+		157BECD02462918B00FDEAFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 157BECCF2462918B00FDEAFD /* GoogleService-Info.plist */; };
+		157BECD224629F7400FDEAFD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECD124629F7400FDEAFD /* SettingViewController.swift */; };
+		157BECD42462D94600FDEAFD /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 157BECD32462D81100FDEAFD /* Lobster-Regular.ttf */; };
+		157BECD82462F5C700FDEAFD /* AudioRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECD72462F5C700FDEAFD /* AudioRecViewController.swift */; };
+		157BECDA2462F89300FDEAFD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECD92462F89300FDEAFD /* PostViewController.swift */; };
+		30D0E2D1EDC97A825CAC846D /* Pods_gmoni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFC6F8E875CA37F5FDB509F /* Pods_gmoni.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		157BECB02462738900FDEAFD /* gmoni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gmoni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157BECB32462738900FDEAFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157BECB52462738900FDEAFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		157BECB72462738900FDEAFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		157BECBA2462738900FDEAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		157BECBC2462738B00FDEAFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		157BECBF2462738B00FDEAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		157BECC12462738B00FDEAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		157BECC7246284DA00FDEAFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		157BECC9246284EE00FDEAFD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		157BECCD24628C8A00FDEAFD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		157BECCF2462918B00FDEAFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		157BECD124629F7400FDEAFD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		157BECD32462D81100FDEAFD /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		157BECD72462F5C700FDEAFD /* AudioRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecViewController.swift; sourceTree = "<group>"; };
+		157BECD92462F89300FDEAFD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		25D605274A34794EF1F1312E /* Pods-gmoni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gmoni.release.xcconfig"; path = "Target Support Files/Pods-gmoni/Pods-gmoni.release.xcconfig"; sourceTree = "<group>"; };
+		3C67DAA207543B5335F75313 /* Pods-gmoni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gmoni.debug.xcconfig"; path = "Target Support Files/Pods-gmoni/Pods-gmoni.debug.xcconfig"; sourceTree = "<group>"; };
+		EBFC6F8E875CA37F5FDB509F /* Pods_gmoni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gmoni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D0E2D1EDC97A825CAC846D /* Pods_gmoni.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,8 @@
 			children = (
 				157BECB22462738900FDEAFD /* gmoni */,
 				157BECB12462738900FDEAFD /* Products */,
+				6F2762629DC61FF8E4024C8B /* Pods */,
+				6AF45816AB2F849B484475D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +79,37 @@
 			children = (
 				157BECB32462738900FDEAFD /* AppDelegate.swift */,
 				157BECB52462738900FDEAFD /* SceneDelegate.swift */,
-				157BECB72462738900FDEAFD /* ViewController.swift */,
+				157BECC7246284DA00FDEAFD /* LoginViewController.swift */,
+				157BECC9246284EE00FDEAFD /* HomeViewController.swift */,
+				157BECCD24628C8A00FDEAFD /* TabBarController.swift */,
+				157BECD72462F5C700FDEAFD /* AudioRecViewController.swift */,
+				157BECD124629F7400FDEAFD /* SettingViewController.swift */,
+				157BECD92462F89300FDEAFD /* PostViewController.swift */,
 				157BECB92462738900FDEAFD /* Main.storyboard */,
 				157BECBC2462738B00FDEAFD /* Assets.xcassets */,
 				157BECBE2462738B00FDEAFD /* LaunchScreen.storyboard */,
 				157BECC12462738B00FDEAFD /* Info.plist */,
+				157BECCF2462918B00FDEAFD /* GoogleService-Info.plist */,
+				157BECD32462D81100FDEAFD /* Lobster-Regular.ttf */,
 			);
 			path = gmoni;
+			sourceTree = "<group>";
+		};
+		6AF45816AB2F849B484475D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBFC6F8E875CA37F5FDB509F /* Pods_gmoni.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F2762629DC61FF8E4024C8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C67DAA207543B5335F75313 /* Pods-gmoni.debug.xcconfig */,
+				25D605274A34794EF1F1312E /* Pods-gmoni.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 157BECC42462738B00FDEAFD /* Build configuration list for PBXNativeTarget "gmoni" */;
 			buildPhases = (
+				CFFBEE1B3FD18D91311467F1 /* [CP] Check Pods Manifest.lock */,
 				157BECAC2462738900FDEAFD /* Sources */,
 				157BECAD2462738900FDEAFD /* Frameworks */,
 				157BECAE2462738900FDEAFD /* Resources */,
+				23424F75020DEFEBD1F297FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +172,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				157BECD42462D94600FDEAFD /* Lobster-Regular.ttf in Resources */,
 				157BECC02462738B00FDEAFD /* LaunchScreen.storyboard in Resources */,
+				157BECD02462918B00FDEAFD /* GoogleService-Info.plist in Resources */,
 				157BECBD2462738B00FDEAFD /* Assets.xcassets in Resources */,
 				157BECBB2462738900FDEAFD /* Main.storyboard in Resources */,
 			);
@@ -133,13 +182,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23424F75020DEFEBD1F297FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gmoni/Pods-gmoni-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gmoni/Pods-gmoni-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gmoni/Pods-gmoni-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFFBEE1B3FD18D91311467F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gmoni-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		157BECAC2462738900FDEAFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				157BECB82462738900FDEAFD /* ViewController.swift in Sources */,
+				157BECDA2462F89300FDEAFD /* PostViewController.swift in Sources */,
+				157BECCA246284EE00FDEAFD /* HomeViewController.swift in Sources */,
+				157BECD82462F5C700FDEAFD /* AudioRecViewController.swift in Sources */,
+				157BECC8246284DB00FDEAFD /* LoginViewController.swift in Sources */,
+				157BECCE24628C8A00FDEAFD /* TabBarController.swift in Sources */,
 				157BECB42462738900FDEAFD /* AppDelegate.swift in Sources */,
+				157BECD224629F7400FDEAFD /* SettingViewController.swift in Sources */,
 				157BECB62462738900FDEAFD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +378,7 @@
 		};
 		157BECC52462738B00FDEAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C67DAA207543B5335F75313 /* Pods-gmoni.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +391,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.masayuki.ohya.gmoni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		157BECC62462738B00FDEAFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D605274A34794EF1F1312E /* Pods-gmoni.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.masayuki.ohya.gmoni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
