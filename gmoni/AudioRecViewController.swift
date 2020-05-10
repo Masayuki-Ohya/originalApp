@@ -10,86 +10,87 @@ import UIKit
 import AVFoundation
 
 class AudioRecViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
-
-    @IBOutlet weak var label: UILabel!
     
-    @IBAction func recordButton(_ sender: Any) {
-        if !isRecording {
-
-            let session = AVAudioSession.sharedInstance()
-            try! session.setCategory(AVAudioSession.Category.playAndRecord)
-            try! session.setActive(true)
-
-            let settings = [
-                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-                AVSampleRateKey: 44100,
-                AVNumberOfChannelsKey: 2,
-                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-            ]
-
-            audioRecorder = try! AVAudioRecorder(url: getURL(), settings: settings)
-            audioRecorder.delegate = self
-            audioRecorder.record()
-
-            isRecording = true
-
-            label.text = "録音中"
-            recordButton.setTitle("STOP", for: .normal)
-            playButton.isEnabled = false
-
-        }else{
-
-            audioRecorder.stop()
-            isRecording = false
-
-            label.text = "待機中"
-            recordButton.setTitle("RECORD", for: .normal)
-            playButton.isEnabled = true
-
-        }
-    }
+    //時間表示関連ここから
+    @IBOutlet weak var timerLabel: UILabel!
     
-    @IBAction func playButton(_ sender: Any) {
-        if !isPlaying {
-
-            audioPlayer = try! AVAudioPlayer(contentsOf: getURL())
-            audioPlayer.delegate = self
-            audioPlayer.play()
-
-            isPlaying = true
-
-            label.text = "再生中"
-            playButton.setTitle("STOP", for: .normal)
-            recordButton.isEnabled = false
-
-        }else{
-
-            audioPlayer.stop()
-            isPlaying = false
-
-            label.text = "待機中"
-            playButton.setTitle("PLAY", for: .normal)
-            recordButton.isEnabled = true
-
-        }
-    }
+    var timer: Timer!
+    var timer_sec: Float = 0
     
-    var audioRecorder: AVAudioRecorder!
-    var audioPlayer: AVAudioPlayer!
+    
+    
     var isRecording = false
-    var isPlaying = false
+    
+    var w: CGFloat = 0
+    var h: CGFloat = 0
+    let d: CGFloat = 50
+    let l: CGFloat = 28
+    
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var baseView: UIView!
+    @IBOutlet weak var outerCircle: UIView!
+    @IBOutlet weak var innerCircle: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
-    func getURL() -> URL{
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let docsDirect = paths[0]
-        let url = docsDirect.appendingPathComponent("recording.m4a")
-        return url
+    @objc func updateTimer(_ timer: Timer) {
+        self.timer_sec += 1.0
+        self.timerLabel.text = String(format: "%.0f", self.timer_sec)
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        w = baseView.frame.size.width
+        h = baseView.frame.size.height
+        initRoundCorners()
+        showStartButton()
+    }
+    
+    @IBAction func recordButtonTapped(_ sender: Any) {
+        
+        if isRecording {
+            UIView.animate(withDuration: 0.2) {
+                self.showStartButton()
+            }
+        } else {
+            UIView.animate(withDuration: 0.2) {
+                self.showStopButton()
+            }
+        }
+        isRecording = !isRecording
+    }
+    
+    func initRoundCorners(){
+        recordButton.layer.masksToBounds = true
+        
+        baseView.layer.masksToBounds = true
+        baseView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        outerCircle.layer.masksToBounds = true
+        outerCircle.layer.cornerRadius = 31
+        innerCircle.layer.masksToBounds = true
+        innerCircle.layer.cornerRadius = 29
+        
+    }
+    
+    func showStartButton() {
+        recordButton.frame = CGRect(x:(w-d)/2,y:(h-d)/2,width:d,height:d)
+        recordButton.layer.cornerRadius = d/2
+        
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
+    }
+    
+    func showStopButton() {
+        recordButton.frame = CGRect(x:(w-l)/2,y:(h-l)/2,width:l,height:l)
+        recordButton.layer.cornerRadius = 3.0
+        
+        if self.timer == nil {
+            self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+        }
+    }
+    
 }
