@@ -20,6 +20,7 @@
 		157BECD42462D94600FDEAFD /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 157BECD32462D81100FDEAFD /* Lobster-Regular.ttf */; };
 		157BECD82462F5C700FDEAFD /* AudioRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECD72462F5C700FDEAFD /* AudioRecViewController.swift */; };
 		157BECDA2462F89300FDEAFD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BECD92462F89300FDEAFD /* PostViewController.swift */; };
+		157BED22246D6D5500FDEAFD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BED21246D6D5200FDEAFD /* Const.swift */; };
 		30D0E2D1EDC97A825CAC846D /* Pods_gmoni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFC6F8E875CA37F5FDB509F /* Pods_gmoni.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		157BECD32462D81100FDEAFD /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		157BECD72462F5C700FDEAFD /* AudioRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecViewController.swift; sourceTree = "<group>"; };
 		157BECD92462F89300FDEAFD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		157BED21246D6D5200FDEAFD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		25D605274A34794EF1F1312E /* Pods-gmoni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gmoni.release.xcconfig"; path = "Target Support Files/Pods-gmoni/Pods-gmoni.release.xcconfig"; sourceTree = "<group>"; };
 		3C67DAA207543B5335F75313 /* Pods-gmoni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gmoni.debug.xcconfig"; path = "Target Support Files/Pods-gmoni/Pods-gmoni.debug.xcconfig"; sourceTree = "<group>"; };
 		EBFC6F8E875CA37F5FDB509F /* Pods_gmoni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gmoni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 				157BECD72462F5C700FDEAFD /* AudioRecViewController.swift */,
 				157BECD124629F7400FDEAFD /* SettingViewController.swift */,
 				157BECD92462F89300FDEAFD /* PostViewController.swift */,
+				157BED21246D6D5200FDEAFD /* Const.swift */,
 				157BECB92462738900FDEAFD /* Main.storyboard */,
 				157BECBC2462738B00FDEAFD /* Assets.xcassets */,
 				157BECBE2462738B00FDEAFD /* LaunchScreen.storyboard */,
@@ -237,6 +240,7 @@
 				157BECB42462738900FDEAFD /* AppDelegate.swift in Sources */,
 				157BECD224629F7400FDEAFD /* SettingViewController.swift in Sources */,
 				157BECB62462738900FDEAFD /* SceneDelegate.swift in Sources */,
+				157BED22246D6D5500FDEAFD /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
