@@ -124,6 +124,7 @@ class AudioRecViewController: UIViewController, AVAudioRecorderDelegate, AVAudio
             audioPlayer = try! AVAudioPlayer(contentsOf: getURL())
             audioPlayer.delegate = self
             audioPlayer.play()
+            audioPlayer.volume = 10.0
             isPlaying = true
             statusLabel.text = "再生中"
             recordButton.isEnabled = false
@@ -180,8 +181,9 @@ class AudioRecViewController: UIViewController, AVAudioRecorderDelegate, AVAudio
         nextviewButton.isHidden = true
     }
     
+    
     func getURL() -> URL{
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let paths = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
         let docsDirect = paths[0]
         let url = docsDirect.appendingPathComponent("recording.m4a")
         return url

@@ -9,5 +9,6 @@
 import Foundation
 
 struct Const {
+    static let VoicePath = "voices"
     static let PostPath = "posts"
 }
