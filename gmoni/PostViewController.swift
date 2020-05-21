@@ -17,15 +17,15 @@ class PostViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlay
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var demoplayButton: UIButton!
     
-    let data = Data()
-    
     var audioPlayer: AVAudioPlayer!
     var isPlaying = false
+    
     
     func getURL() -> URL{
         let paths = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
         let docsDirect = paths[0]
         let url = docsDirect.appendingPathComponent("recording.m4a")
+        let voicedata = try! Data(contentsOf: url)
         return url
     }
     
@@ -49,6 +49,7 @@ class PostViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlay
     @IBAction func handlePostButton(_ sender: Any) {
         let postRef = Firestore.firestore().collection(Const.PostPath).document()
         let voiceRef = Storage.storage().reference().child(Const.VoicePath).child(postRef.documentID + ".m4a")
+        let data = try!Data(contentsOf: getURL())
         
         SVProgressHUD.show()
         
@@ -71,12 +72,12 @@ class PostViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlay
         }
         
         let name = Auth.auth().currentUser?.displayName
-         let postDic = [
-             "name": name!,
-             "caption": self.textField.text!,
-             "date": FieldValue.serverTimestamp(),
-             ] as [String : Any]
-         postRef.setData(postDic)
+        let postDic = [
+            "name": name!,
+            "caption": self.textField.text!,
+            "date": FieldValue.serverTimestamp(),
+            ] as [String : Any]
+        postRef.setData(postDic)
          // HUDで投稿完了を表示する
          SVProgressHUD.showSuccess(withStatus: "投稿しました")
          // 投稿処理が完了したので先頭画面に戻る
