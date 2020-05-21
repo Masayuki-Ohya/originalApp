@@ -21,8 +21,6 @@ class PostTableViewCell: UITableViewCell, AVAudioRecorderDelegate, AVAudioPlayer
     var audioPlayer: AVAudioPlayer!
     var isPlaying = false
     
-    var voiceURL = URL(fileURLWithPath: voicepath)
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -34,7 +32,6 @@ class PostTableViewCell: UITableViewCell, AVAudioRecorderDelegate, AVAudioPlayer
     func setPostData(_ postData: PostData) {
         
         let voiceRef = Storage.storage().reference().child(Const.VoicePath).child(postData.id + ".m4a")
-        let voicepath = voiceRef.fullPath;
 
         self.accountLabel.text = "\(postData.name!)"
         self.captionLabel.text = "\(postData.caption!)"
@@ -61,7 +58,7 @@ class PostTableViewCell: UITableViewCell, AVAudioRecorderDelegate, AVAudioPlayer
     
     @IBAction func playButtonTapped(_ sender: Any) {
         if !isPlaying {
-            audioPlayer = try! AVAudioPlayer(contentsOf: voiceURL)
+            audioPlayer = try! AVAudioPlayer(contentsOf: )
             audioPlayer.delegate = self
             audioPlayer.play()
             audioPlayer.volume = 2.0
